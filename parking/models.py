@@ -38,7 +38,7 @@ class ParkingRecord(models.Model):
         ParkingSpot,
         on_delete=models.PROTECT,
         related_name='parking_records',
-        verbose_name='Veículo'
+        verbose_name='Vaga'
     )
     entry_time = models.DateField(
         auto_now_add=True,
