@@ -32,9 +32,10 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'jazzmin',
+    'rest_framework',
+    'rest_framework_simplejwt',
     
-    "rest_framework",
-    
+    'authentication',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -271,4 +272,12 @@ JAZZMIN_SETTINGS = {
     #"changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs"},
     # Add a language dropdown into the admin
     #"language_chooser": True,
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        
+    ],
+    
 }
