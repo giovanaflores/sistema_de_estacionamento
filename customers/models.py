@@ -5,18 +5,18 @@ from django.contrib.auth.models import User
 class Customer(models.Model):
     user = models.OneToOneField(
         User,
-        on_delete=models.PROTECT, # impede que um objeto seja deletado se existir outro objeto relacionado com ele
-        blank=True, 
+        on_delete=models.PROTECT,  # impede que um objeto seja deletado se existir outro objeto relacionado com ele
+        blank=True,
         null=True,
-        related_name='customers',  
-        verbose_name='Usuário',  
+        related_name='customers',
+        verbose_name='Usuário',
     )
     name = models.CharField(max_length=100, verbose_name='Nome')
     cpf = models.CharField(
-    max_length=15,
-    blank=True,
-    null=True,
-    verbose_name='CPF'
+        max_length=15,
+        blank=True,
+        null=True,
+        verbose_name='CPF'
     )
     phone = models.CharField(
         max_length=15,
@@ -24,18 +24,18 @@ class Customer(models.Model):
         null=True,
         verbose_name='Telefone',
     )
-    created_at = models.DateTimeField( # armazena quando o registro foi criado
+    created_at = models.DateTimeField(  # armazena quando o registro foi criado
         auto_now_add=True,
         verbose_name='Criado em',
     )
-    updated_at = models.DateTimeField(  # DateTimeField armazena data e hora                                 
+    updated_at = models.DateTimeField(  # DateTimeField armazena data e hora
         auto_now=True,
         verbose_name='Atualizado em',
     )
-    
+
     class Meta:
         verbose_name = 'Cliente'
         verbose_name_plural = 'Clientes'
-        
+
     def __str__(self):
         return self.name

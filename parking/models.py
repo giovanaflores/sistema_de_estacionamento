@@ -1,6 +1,7 @@
 from django.db import models
 from vehicles.models import Vehicle
 
+
 class ParkingSpot(models.Model):
     spot_number = models.CharField(
         max_length=10,
@@ -11,22 +12,23 @@ class ParkingSpot(models.Model):
         default=False,
         verbose_name='Ocupado',
     )
-    created_at = models.DateTimeField( # armazena quando o registro foi criado
+    created_at = models.DateTimeField(  # armazena quando o registro foi criado
         auto_now_add=True,
         verbose_name='Criado em',
     )
-    updated_at = models.DateTimeField(  # DateTimeField armazena data e hora                                 
+    updated_at = models.DateTimeField(  # DateTimeField armazena data e hora
         auto_now=True,
         verbose_name='Atualizado em',
     )
-    
+
     class Meta:
         verbose_name = 'Vaga'
         verbose_name_plural = 'Vagas'
-    
+
     def __str__(self):
         return self.spot_number
-    
+
+
 class ParkingRecord(models.Model):
     vehicle = models.ForeignKey(
         Vehicle,
@@ -42,16 +44,17 @@ class ParkingRecord(models.Model):
     )
     entry_time = models.DateField(
         auto_now_add=True,
-        verbose_name='Horário de Entrada',   
+        verbose_name='Horário de Entrada',
     )
     exit_time = models.DateTimeField(
         blank=True,
         null=True,
         verbose_name='Horário de Saída',
     )
+
     class Meta:
         verbose_name = 'Registro'
         verbose_name_plural = 'Registros'
-    
+
     def __str__(self):
         return f'{self.vehicle} - {self.parking_spot} - {self.entry_time}'

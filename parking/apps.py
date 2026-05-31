@@ -3,7 +3,7 @@ from django.apps import AppConfig
 
 class ParkingConfig(AppConfig):
     name = 'parking'
-    verbose_name=''
+    verbose_name = ''
 
     def ready(self):
-        import parking.signals
+        import parking.signals  # noqa: F401
