@@ -1,7 +1,7 @@
 from rest_framework.permissions import DjangoModelPermissions
 from rest_framework import viewsets
 
-from core.permissions import IsOwnerOfVehivleOrRecord
+from core.permissions import IsOwnerOfVehicleOrRecord
 from parking.filters import ParkingSpotFilterClass, ParkingRecordFilterClass
 from parking.models import ParkingSpot, ParkingRecord
 from parking.serializers import ParkingSpotSerializer, ParkingRecordSerializer
@@ -18,7 +18,7 @@ class ParkingRecordViewSet(viewsets.ModelViewSet):
     queryset = ParkingRecord.objects.all()
     serializer_class = ParkingRecordSerializer
     rql_filter_class = ParkingRecordFilterClass
-    permission_classes = [DjangoModelPermissions, IsOwnerOfVehivleOrRecord]
+    permission_classes = [DjangoModelPermissions, IsOwnerOfVehicleOrRecord]
 
     def get_queryset(self):
         user = self.request.user
