@@ -100,48 +100,29 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 JAZZMIN_SETTINGS = {
-
     "site_title": "Parking Service",
-
     "site_header": "Library",
-
     "site_brand": "Parking Service",
-
     "site_logo": "images/site-logo.svg",
-
-
     "login_logo": "images/login-logo.svg",
-
     "site_icon": "images/icone.svg",
-
-    
     "welcome_sign": "Bem-vindo ao Parking Service",
-
     "copyright": "Acme Library Ltd",
-  
     "show_sidebar": True,
-
-   
     "navigation_expanded": True,
-
-
     "icons": {
         "auth": "fas fa-users-cog",
         "auth.user": "fas fa-user",
         "auth.Group": "fas fa-users",
-
         "customers.Customer": "fa-solid fa-wallet",
         "vehicles.Vehicle": "fa-solid fa-car",
         "vehicles.VehicleType": "fa-solid fa-car-side",
         "parking.ParkingRecord": "fa-solid fa-square-parking",
         "parking.ParkingSpot": "fa-solid fa-boxes-packing",
-        },
-
+    },
     "default_icon_parents": "fas fa-chevron-circle-right",
     "default_icon_children": "fas fa-circle",
-
     "show_ui_builder": False,
-
 }
 
 REST_FRAMEWORK = {
