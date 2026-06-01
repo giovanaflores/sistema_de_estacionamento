@@ -130,7 +130,7 @@ JAZZMIN_SETTINGS = {
         "vehicles.VehicleType": "fa-solid fa-car-side",
         "parking.ParkingRecord": "fa-solid fa-square-parking",
         "parking.ParkingSpot": "fa-solid fa-boxes-packing",
-    },
+        },
 
     "default_icon_parents": "fas fa-chevron-circle-right",
     "default_icon_children": "fas fa-circle",
@@ -144,5 +144,5 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
 
     ],
-
+    'DEFAULT_FILTER_BACKENDS': ['dj_rql.drf.RQLFilterBackend'],
 }
