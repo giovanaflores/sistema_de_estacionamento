@@ -1,12 +1,12 @@
 services:
 
   parking_service:
-  build: .
-  restart: always
-  ports:
-    - 8000:8000
-  depends_on:
-    - parking_db
+    build: .
+    restart: always
+    ports:
+      - 8000:8000
+    depends_on:
+      - parking_db
 
   parking_db:
     image: postgres:15

@@ -9,7 +9,7 @@ class ParkingRecordFilterClass(AutoRQLFilterClass):
     MODEL = ParkingRecord
     FILTERS = (
         {
-            'filter': 'licensee_plate',
+            'filter': 'license_plate',
             'source': 'vehicle__license_plate',
         },
     )
