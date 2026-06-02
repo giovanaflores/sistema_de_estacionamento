@@ -1,7 +1,15 @@
+amqp==5.3.1
 asgiref==3.11.1
 attrs==26.1.0
 autopep8==2.3.2
+billiard==4.2.4
 cachetools==7.1.4
+celery==5.6.3
+click==8.4.1
+click-didyoumean==0.3.1
+click-plugins==1.1.1.2
+click-repl==0.3.0
+colorama==0.4.6
 Django==6.0.5
 django-jazzmin==3.0.4
 django-rql==4.4.1
@@ -12,9 +20,12 @@ flake8==7.3.0
 inflection==0.5.1
 jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
+kombu==5.6.2
 lark-parser==0.11.0
 lib-rql==2.0.2
 mccabe==0.7.0
+packaging==26.2
+prompt_toolkit==3.0.52
 psycopg2-binary==2.9.12
 pycodestyle==2.14.0
 pyflakes==3.4.0
@@ -26,4 +37,7 @@ rpds-py==2026.5.1
 six==1.17.0
 sqlparse==0.5.5
 tzdata==2026.2
+tzlocal==5.3.1
 uritemplate==4.2.0
+vine==5.1.0
+wcwidth==0.7.0

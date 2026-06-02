@@ -1,3 +1,4 @@
+
 services:
 
   parking_service:
@@ -7,6 +8,7 @@ services:
       - 8000:8000
     depends_on:
       - parking_db
+      - rabbitmq
 
   parking_db:
     image: postgres:15
@@ -19,5 +21,17 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=parking_service
 
+  rabbitmq:
+    image: rabbitmq:4.0-management
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+
 volumes:
   postgres_data:
+  rabbitmq-data:
