@@ -7,11 +7,13 @@ ENV PYTHONUNBUFFERED 1
 
 RUN apt update
 
-COPY . .
+COPY requirements.txt .
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+RUN playwright install chromium
+RUN playwright install-deps chromium
+
+COPY . .
 
 EXPOSE 8000
-
-CMD python manage.py migrate && python manage.py runserver 0.0.0.0:8000
