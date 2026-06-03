@@ -20,3 +20,9 @@ Ao longo do desenvolvimento, aprendi e apliquei:
 * **Boas Práticas:** Uso de linters (`.flake8`) e arquivos de isolamento (`.gitignore`, `.dockerignore`).
 
 ---
+## 🚀 Como Executar o Projeto
+
+1. Certifique-se de ter o **Docker** e o **Docker Compose** instalados.
+2. Clone o repositório:
+```bash
+   git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
