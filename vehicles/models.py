@@ -7,8 +7,6 @@ class VehicleType(models.Model):
         max_length=50,
         unique=True,
         verbose_name='Nome',
-
-
     )
     description = models.TextField(
         blank=True,
